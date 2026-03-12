@@ -28,9 +28,9 @@ THREADS=8
 # 下面的是快速测试用的参数，实际科研中建议使用至少 512 8 8，如果数据量足够可以用 768 12 12
 BATCH_SIZE=36
 MAX_EPOCHS=50
-N_EMBD=256  
-N_LAYER=4
-N_HEAD=4
+N_EMBD=512  
+N_LAYER=8
+N_HEAD=8
 LEARNING_RATE=3.3e-4
 
 # 定义生成参数
