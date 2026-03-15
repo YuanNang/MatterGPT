@@ -1,8 +1,15 @@
+[build-system]
+requires = ["setuptools>=18.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "slices"
 version = "2.0.8"
 description = "SLICES"
 requires-python = ">=3.9,<3.12"
+readme = "README.md"
+license = {text = "GPL 2.1"}
+authors = [{name = "Hang Xiao", email = "xiaohang07@live.cn"}]
 dependencies = [
     "setuptools>=18.0",
     "numpy==1.26.4",
@@ -14,4 +21,22 @@ dependencies = [
     "pymatgen==2023.11.12",
     "scipy==1.13.0",
     "ase==3.22.1",
+    "transformers>=4.57.6",
+]
+
+[tool.setuptools]
+packages = {find = {}}
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
+
+[tool.setuptools.package-data]
+slices = [
+    "nlopt.h",
+    "xtb_noring_nooutput_nostdout_noCN",
+    "./MP-2021.2.8-EFS/checkpoint",
+    "./MP-2021.2.8-EFS/m3gnet.data-00000-of-00001",
+    "./MP-2021.2.8-EFS/m3gnet.index",
+    "./MP-2021.2.8-EFS/m3gnet.json"
 ]

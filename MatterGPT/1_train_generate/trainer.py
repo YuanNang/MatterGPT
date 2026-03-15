@@ -87,7 +87,7 @@ class Trainer:
                 mode='min', 
                 factor=0.1, 
                 patience=1,  # 可根据需要调整
-                verbose=True,
+                # verbose=True,
                 min_lr=config.final_lr
             )
         else:
